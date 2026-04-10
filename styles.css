@@ -1,0 +1,219 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #717171;
+  padding: 20px 0;
+  z-index: 800;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  font-size: 20px;
+}
+
+nav a {
+  color: rgb(245, 249, 255);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+/* Общие стили секций */
+.panel {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 4rem;
+  padding: 100px 50px 50px 50px;
+  box-sizing: border-box;
+  gap: 15px;
+}
+
+/* СЕКЦИЯ ГЛАВНАЯ */
+#glavn {
+  background-color: #f5f5f5;
+}
+
+#glavn h2 {
+  font-size: 2rem;
+  color: #222;
+  font-weight: 800;
+  margin-left: 150px;
+}
+
+#glavn h3 {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 800;
+  margin-left: 150px;
+  margin-bottom: 20px;
+}
+
+#glavn .image-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 150px;
+}
+
+#glavn img {
+  width: 450px;
+  height: auto;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#glavn img:hover {
+  transform: scale(1.03);
+}
+
+#glavn p {
+  margin-left: 760px;
+  margin-top: -350px;
+  color: #222;
+  font-weight: 800;
+  font-size: 26px;
+}
+
+#glavn button {
+  margin-left: 800px; 
+  margin-top: -60px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #00aaff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+#glavn button:hover {
+  background-color: #008ecc;
+  transform: scale(1.05);
+}
+
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+/* СЕКЦИЯ БЛОГ — иконки внизу */
+#blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Распределяет пространство между верхом и низом */
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 100px 20px 40px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#blog p {
+  margin-left: -70px;
+  color: #222;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: -6px; /* Отступ между параграфами */
+}
+
+#blog p:last-child {
+  margin-bottom: 0; /* Убираем отступ у последнего параграфа */
+}
+/* Пустой div для сохранения пространства вверху */
+.blog-top-space {
+  flex: 1;
+}
+
+.socials-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-bottom: 20px; /* Отступ от нижнего края */
+}
+
+.socials-container a {
+  background-color: white;
+  padding: 0.90em;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(106, 0, 255, 0.05);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  overflow: visible;
+  position: relative;
+}
+
+.socials-container a:hover {
+  box-shadow: 0 8px 15px rgba(106, 0, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.socials-container a svg {
+  height: 32px;
+  width: 32px;
+  fill: #000000;
+  margin: 0;
+  display: block;
+  overflow: visible;
+}
+
+.socials-container a svg path {
+  fill: #000000;
+  stroke: none;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  #blog {
+    padding: 80px 15px 30px 15px;
+  }
+  
+  .socials-container {
+    gap: 15px;
+  }
+  
+  .socials-container a {
+    height: 50px;
+    width: 50px;
+    padding: 0.75em;
+  }
+  
+  .socials-container a svg {
+    height: 28px;
+    width: 28px;
+  }
+}
